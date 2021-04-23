@@ -1,3 +1,7 @@
+let myJQuerySubmit = $("#support > input[type=submit]:nth-child(4)");
+let myJQueryUl = $("#personas")
+let myJQueryChat = $('#supportChat');
+
 let myUserProfile = new UserProfile();
 
 myUserProfile.load();
@@ -25,13 +29,13 @@ for (const element of document.body.children) {
 
 let signupButton = document.body.children[2]; // Es el tercer elemento dentro de body, osea indice 2 del array
 
-signupButton.innerHTML = "Registrar"
+signupButton.innerHTML = "Registrar";
 
 console.dir(signupButton);
 
-let buttonLogin = document.getElementById("login");
-let buttons_css = document.getElementsByClassName("button");
-let all_buttons = document.getElementsByTagName("button");
+let buttonLogin = $("#login") //document.getElementById("login");
+let buttons_css = $(".button"); //document.getElementsByClassName("button");
+let all_buttons = $("button"); //document.getElementsByTagName("button");
 
 console.log(buttonLogin);
 
@@ -43,19 +47,28 @@ for (const elements of all_buttons) {
     console.log(elements);
 }
 
+//////////////////////////////////////
+// Javascript Vainilla - YA NO LO USAMOS MAS
+////////////////////////////////////////
 // Creo elemento
-let myElementP = document.createElement("p");
+//let myElementP = document.createElement("p");
 
-myElementP.innerHTML = "<h2> Hola Coderhouse </h2>";
+//myElementP.innerHTML = "<h2> Hola Coderhouse </h2>";
 
 // se lo agrego al buttonlogin
-buttonLogin.appendChild(myElementP);
+//buttonLogin.appendChild(myElementP);
+
+//////////////////////////////////////
+// Ahora lo hago por jQuery
+////////////////////////////////////////
+buttonLogin.append("<h2> Hola Coderhouse </h2>");
+
 
 // Conozco el parent de myElementP
 //buttonLogin.removeChild(myElementP);
 
 // Y si no se que se encuentra en buttoLogin?
-myElementP.parentNode.removeChild(myElementP);
+//myElementP.parentNode.removeChild(myElementP);
 
 let myUserInput = document.getElementById("usuario");
 
