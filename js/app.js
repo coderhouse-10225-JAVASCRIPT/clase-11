@@ -74,15 +74,16 @@ let myUserInput = document.getElementById("usuario");
 
 myUserInput.value= "HOMERO SIMPSONs"
 
-let myListPersonas = document.getElementById("personas");
+let myListPersonas = $("#personas") //document.getElementById("personas");
 
 let personasList = ["HOMERO", "MARGE", "LISA", "BART"];
 
 // Agrego a UL la lista de personas en el array
 for (const persona of personasList) {
-    let myItemList = document.createElement("li");
-    myItemList.innerHTML = persona;
-    myListPersonas.appendChild(myItemList);
+    //let myItemList = document.createElement("li");
+    //myItemList.innerHTML = persona;
+    //myListPersonas.appendChild(myItemList);
+    myListPersonas.append("<li>" + persona + "</li>");
 }
 
 
