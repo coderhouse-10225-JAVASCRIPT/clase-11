@@ -33,7 +33,7 @@ signupButton.innerHTML = "Registrar";
 
 console.dir(signupButton);
 
-let buttonLogin = $("#login") //document.getElementById("login");
+let buttonLogin = $("#login"); //document.getElementById("login");
 let buttons_css = $(".button"); //document.getElementsByClassName("button");
 let all_buttons = $("button"); //document.getElementsByTagName("button");
 
@@ -70,11 +70,12 @@ buttonLogin.append("<h2> Hola Coderhouse </h2>");
 // Y si no se que se encuentra en buttoLogin?
 //myElementP.parentNode.removeChild(myElementP);
 
-let myUserInput = document.getElementById("usuario");
+let myUserInput = $("#usuario");
 
-myUserInput.value= "HOMERO SIMPSONs"
+// Asi cambio el valor del elemento.
+myUserInput.val("HOMERO SIMPSONs");
 
-let myListPersonas = $("#personas") //document.getElementById("personas");
+let myListPersonas = $("#personas");
 
 let personasList = ["HOMERO", "MARGE", "LISA", "BART"];
 
@@ -119,12 +120,8 @@ sessionStorage.setItem("carrito", JSON.stringify(myCarrito));
 
 
 // vamos a pintar un carrito
-let myHTMLCarrito = document.getElementById("myCarrito");
+let myHTMLCarrito = $("#myCarrito");
 
 for (const product of myCarrito) {
-    let myItem = document.createElement("li");
-
-    myItem.innerHTML = product.getHTML();
-
-    myHTMLCarrito.appendChild(myItem);
+    myHTMLCarrito.append("<li>" + product.getHTML() + "</li>");
 }
